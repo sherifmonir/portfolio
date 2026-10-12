@@ -1,5 +1,4 @@
 import { cn } from "@/app/utils/cn";
-import { useId } from "react";
 
 type SpotlightProps = {
   className?: string;
@@ -7,20 +6,17 @@ type SpotlightProps = {
 };
 
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
-  const id = useId();
-  const filterId = `filter-${id.replace(/:/g, "")}`;
-
   return (
     <svg
       className={cn(
-        "pointer-events-none absolute z-50 h-[169%] w-[138%] opacity-100 lg:w-[84%]",
+        "animate-spotlight pointer-events-none absolute z-[1]  h-[169%] w-[138%] lg:w-[84%] opacity-0",
         className
       )}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3787 2842"
       fill="none"
     >
-      <g filter={`url(#${filterId})`}>
+      <g filter="url(#filter)">
         <ellipse
           cx="1924.71"
           cy="273.501"
@@ -28,12 +24,12 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
           ry="273.501"
           transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
           fill={fill || "white"}
-          fillOpacity="0.4"
+          fillOpacity="0.21"
         ></ellipse>
       </g>
       <defs>
         <filter
-          id={filterId}
+          id="filter"
           x="0.860352"
           y="0.838989"
           width="3785.16"
