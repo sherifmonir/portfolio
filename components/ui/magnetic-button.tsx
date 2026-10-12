@@ -1,63 +1,38 @@
 "use client";
 
-import React, { useRef, useState } from "react";
-import { motion } from "motion/react";
+import React from "react";
 
-export const MagneticButton = ({
-  children,
-  strength = 0.8,
-  maxDistance = 100,
-}: {
-  children: React.ReactNode;
-  strength?: number;
-  maxDistance?: number;
-}) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+interface MagicButtonProps {
+  title: string;
+  icon: React.ReactNode;
+  position?: string;
+  handleClick?: () => void;
+  otherClasses?: string;
+}
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!ref.current) return;
-
-    const { width, height, left, top } = ref.current.getBoundingClientRect();
-    const { clientX, clientY } = e;
-
-    let x = (clientX - (left + width / 2)) * strength;
-    let y = (clientY - (top + height / 2)) * strength;
-
-    const distance = Math.hypot(x, y);
-    if (distance > maxDistance) {
-      const scale = maxDistance / distance;
-      x *= scale;
-      y *= scale;
-    }
-
-    setPosition({ x, y });
-  };
-
-  const handleMouseLeave = () => {
-    setPosition({ x: 0, y: 0 });
-  };
-
-  const hasMoved = position.x !== 0 || position.y !== 0;
+const MagneticButton = ({
+  title,
+  icon,
+  position = "right",
+  handleClick,
+  otherClasses = "",
+}: MagicButtonProps) => {
   return (
-    <div
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="cursor-pointer rounded-lg border border-dashed transition-colors duration-150 [--show-color:var(--color-blue-500)]"
-      style={{
-        borderColor: hasMoved ? "var(--show-color)" : "transparent",
-        backgroundColor: hasMoved
-          ? "color-mix(in srgb,var(--show-color) 20%, transparent)"
-          : "transparent",
-      }}
+    <button
+      onClick={handleClick}
+      className={`bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block ${otherClasses}`}
     >
-      <motion.div
-        ref={ref}
-        animate={{ x: position.x, y: position.y }}
-        transition={{ type: "spring", stiffness: 150, damping: 25, mass: 0.1 }}
-      >
-        {children}
-      </motion.div>
-    </div>
+      <span className="absolute inset-0 overflow-hidden rounded-full">
+        <span className="absolute inset-0 rounded-full bg-[radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+      </span>
+      <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-2 px-4 ring-1 ring-white/10">
+        {position === "left" && icon}
+        <span>{title}</span>
+        {position === "right" && icon}
+      </div>
+      <span className="absolute bottom-0 left-4.5 h-px w-[calc(100%-2.25rem)] bg-linear-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
+    </button>
   );
 };
+
+export default MagneticButton;
