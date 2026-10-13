@@ -1,7 +1,7 @@
 "use client"
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import MagneticButton from "./ui/magnetic-button";
 import { BackgroundRippleEffect } from "./ui/background-ripple-effect";
+import MagicButton from "./ui/magic-button";
 
 
 
@@ -28,7 +28,7 @@ const Hero = () => {
             Hi! I&apos;m Sherif, a Next.js Developer based in UAE.
           </p>
 
-          <MagneticButton title={""} icon={undefined} />
+          <MagicButton title={"My Projects"} icon={undefined} position={"right"} />
             
         </div>
       </div>

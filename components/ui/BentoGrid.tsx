@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/app/data/confetti.json";
 import { cn } from "@/app/utils/cn"; 
 import { BackgroundGradient } from "./background-gradient";
-import MagneticButton from "./magnetic-button";
+import MagicButton from "./magic-button";
 
 export const BentoGrid = ({
   className,
@@ -47,22 +46,13 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const leftLists = ["ReactJS", "TailWind CSS", "Typescript"];
+  const rightLists = ["VueJS", "NextJS", "TanStack"];
 
   const [copied, setCopied] = useState(false);
 
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "sherif.monir.badreddin@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -143,15 +133,8 @@ export const BentoGridItem = ({
 
         {id === 6 && (
           <div className="mt-5 relative z-20">
-            <div
-              className={`absolute -bottom-5 right-0 ${
-                copied ? "block" : "block"
-              }`}
-            >
-              <Lottie options={defaultOptions} height={200} width={400} />
-            </div>
-
-            <MagneticButton
+           
+            <MagicButton
               title={copied ? "Email is Copied!" : "Copy my email address"}
               icon={<IoCopyOutline />}
               position="left"
@@ -164,12 +147,19 @@ export const BentoGridItem = ({
     </div>
   );
 
-  if (id === 6) {
+  
+   if (id === 6) {
     return (
-      <div className={cn("row-span-1 rounded-3xl group/bento transition duration-200 shadow-input dark:shadow-none flex flex-col space-y-4", className)}>
+      <div
+        className={cn(
+          "row-span-1 rounded-3xl group/bento transition duration-200 shadow-input dark:shadow-none flex flex-col w-full relative",
+          className
+        )}
+      >
         <BackgroundGradient
+          containerClassName="w-full block"
           className={cn(
-            "w-full h-full rounded-3xl overflow-hidden bg-[rgb(4,7,29)] bg-linear-to-r from-[rgba(4,7,29,1)] to-[rgba(12,14,35,1)] border border-white/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4"
+            "w-full h-full rounded-3xl overflow-hidden bg-[rgb(4,7,29)] border border-white/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 p-4 sm:p-10"
           )}
         >
           {cardContent}
@@ -195,5 +185,3 @@ export const BentoGridItem = ({
     </div>
   );
 };
-
-export default BentoGrid;
