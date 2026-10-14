@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import GridGlobe from "./GridGlobe";
-import animationData from "@/app/data/confetti.json";
 import { cn } from "@/app/utils/cn"; 
 import { BackgroundGradient } from "./background-gradient";
 import MagicButton from "./magic-button";
@@ -46,8 +45,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "TailWind CSS", "Typescript"];
-  const rightLists = ["VueJS", "NextJS", "TanStack"];
+  const leftLists = ["Vue.JS", "TailWind CSS", "TypeScript"];
+  const rightLists = ["ReactJS", "Next.JS", "TanStack"];
 
   const [copied, setCopied] = useState(false);
 
