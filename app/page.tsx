@@ -3,7 +3,8 @@ import Grid from "@/components/Grid";
 import RecentProject from "@/components/RecentProject";
 import { FloatingNav } from "@/components/ui/floating-nav";
 import { navItems } from "./data";
-import { Approach } from "@/components/Approach";
+import Approach from "@/components/Approach";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Grid />
         <RecentProject />
         <Approach />
+        <Footer />
       </div>
     </main>
   );
