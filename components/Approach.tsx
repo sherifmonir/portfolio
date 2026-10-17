@@ -15,11 +15,9 @@ const Approach = () => {
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
-          title="Planning & Strategy"
+          title="Understand & Plan"
           icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
+          des="I start by clarifying requirements, users, and edge cases, then break the work into small components and tasks before writing code."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -28,11 +26,9 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
+          title="Build & Communicate"
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          des="I build responsive, accessible UI with React and TypeScript, commit in small steps, and flag blockers early instead of staying quiet."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -50,11 +46,9 @@ const Approach = () => {
           {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Development & Launch"
+          title="Test, Ship & Iterate"
           icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          des="I debug across browsers and screen sizes, deploy, then improve based on feedback. Every project I ship teaches me something for the next one."
         >
           <CanvasRevealEffect
             animationSpeed={3}
