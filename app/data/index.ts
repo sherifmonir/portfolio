@@ -94,11 +94,5 @@ export const socialMedia = [
     id: 2,
     img: "/link.svg",
     link:"https://linkedin.com/in/sherif-monir"
-  },
-  ,
- /* {
-    id: 3,
-    img: "/phone.svg",
-    link:"https://linkedin.com/in/sherif-monir"
-  },*/
+  }
 ];
