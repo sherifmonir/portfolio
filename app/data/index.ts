@@ -68,17 +68,20 @@ export const projects = [
     id: 1,
     title: "Lumio",
     des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    img: "/lumio.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "app.svg", "tan-stack.svg"],
+    link: "https://my-lumio.netlify.app/",
+    code: "https://github.com/sherifmonir/Lumio"
+  
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "Good Story",
+    des: "Social platform with a custom follow system, threaded comments, @mentions, notifications, and dark mode.",
+    img: "/Goodstory.png",
+    iconLists: ["/next.svg", "/tail.svg", "app.svg" ],
+    link: "https://goodstory.netlify.app/",
+    code: "https://github.com/sherifmonir/good-story"
   }
 ];
 

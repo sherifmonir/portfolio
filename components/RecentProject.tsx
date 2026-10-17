@@ -1,39 +1,31 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/app/data";
 import { PinContainer } from "./ui/pin";
 
-
 const RecentProjects = () => {
   return (
-    <div className="py-20">
+    <div className="py-20" id="projects">
       <h1 className="heading">
-        My Recent{" "}
-        <span className="text-purple"> Projects</span>
+        My Recent <span className="text-purple">Projects</span>
       </h1>
+
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
           <div
-            className="lg:min-h-130 h-100 flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
-            >
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
-                  <img src="/bg.png" alt="bgimg" />
-                </div>
+             title={"GitHub Repo"}
+             href={item.link}>
+              {/* Fixed aspect ratio; image fills it completely */}
+              <div className="relative sm:w-96 w-[80vw] aspect-video overflow-hidden rounded-2xl mb-6 bg-[#13162D]">
                 <img
                   src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
+                  alt={item.title}
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
 
@@ -41,37 +33,23 @@ const RecentProjects = () => {
                 {item.title}
               </h1>
 
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
+              <p className="lg:text-base font-light text-sm line-clamp-2 mt-2 text-[#BEC1DD]">
                 {item.des}
               </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
+              <div className="flex items-center justify-between mt-5 mb-1">
+                <div className="flex items-center -space-x-2">
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/20 rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
+                      className="shrink-0 border border-white/20 rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <img src={icon} alt="" className="p-2" />
                     </div>
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div>
+                
               </div>
             </PinContainer>
           </div>
@@ -81,4 +59,4 @@ const RecentProjects = () => {
   );
 };
 
-export default RecentProjects;
+export default RecentProjects;;

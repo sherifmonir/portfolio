@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/app/utils/cn";
 
-
 export const PinContainer = ({
   children,
   title,
@@ -76,7 +75,7 @@ export const PinPerspective = ({
             target={"_blank"}
             className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 "
           >
-            <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5">
+            <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5 whitespace-nowrap">
               {title}
             </span>
 
@@ -164,4 +163,4 @@ export const PinPerspective = ({
       </div>
     </motion.div>
   );
-}
+};
