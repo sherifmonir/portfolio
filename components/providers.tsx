@@ -1,16 +1,17 @@
-'use client'
-import { ThemeProvider, useTheme } from "next-themes"
-const providers = ({children}: {children: React.ReactNode}) => {
-  return (
-    <ThemeProvider
-    enableSystem
-    attribute="class"
-    defaultTheme="system"
-    disableTransitionOnChange
-    >
-        {children}
-    </ThemeProvider>
-  )
-}
+"use client";
 
-export default providers
+import React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+
+export function Providers({ children }: { children: React.ReactNode }) {
+  return (
+    <NextThemesProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
+    >
+      {children}
+    </NextThemesProvider>
+  );
+}

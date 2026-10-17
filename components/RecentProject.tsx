@@ -16,7 +16,7 @@ const RecentProjects = () => {
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-130 h-100 flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
             <PinContainer
@@ -56,7 +56,7 @@ const RecentProjects = () => {
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-white/20 rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                       style={{
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}

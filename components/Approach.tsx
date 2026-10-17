@@ -87,8 +87,8 @@ const Card = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       // change h-[30rem] to h-[35rem], add rounded-3xl
-      className="border border-black/[0.2] group/canvas-card flex items-center justify-center
-       dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative lg:h-[35rem] rounded-3xl "
+      className="border border-black/20 group/canvas-card flex items-center justify-center
+       dark:border-white/20  max-w-sm w-full mx-auto p-4 relative lg:h-140 rounded-3xl "
       style={{
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
@@ -147,7 +147,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
   return (
     <div>
 
-      <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+      <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-size-[200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
           {order}
         </button>
     </div>
