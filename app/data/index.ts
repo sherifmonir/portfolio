@@ -67,7 +67,7 @@ export const projects = [
   {
     id: 1,
     title: "Lumio",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+    des: "Social platform with a custom follow system, threaded comments, @mentions, notifications, and dark mode.",
     img: "/lumio.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "app.svg", "tan-stack.svg"],
     link: "https://my-lumio.netlify.app/",
@@ -77,7 +77,7 @@ export const projects = [
   {
     id: 2,
     title: "Good Story",
-    des: "Social platform with a custom follow system, threaded comments, @mentions, notifications, and dark mode.",
+    des: "A movie discovery app built with React.js, JavaScript, Appwrite, Tailwind CSS, and the TMDB API.",
     img: "/Goodstory.png",
     iconLists: ["/next.svg", "/tail.svg", "app.svg" ],
     link: "https://goodstory.netlify.app/",

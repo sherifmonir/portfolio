@@ -151,7 +151,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
     //   height="65"
     //   viewBox="0 0 66 65"
     //   fill="none"
-    //   xmlns="http://www.w3.org/2000/svg"
+    //   
     //   className="h-10 w-10 text-black dark:text-white group-hover/canvas-card:text-white "
     // >
     //   <path
