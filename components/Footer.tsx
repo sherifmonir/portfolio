@@ -1,40 +1,54 @@
-import { FaLocationArrow } from "react-icons/fa6";
-import MagicButton from "./ui/magic-button";
-import { socialMedia } from "@/app/data";
 import Link from "next/link";
+import { socialMedia } from "@/app/data";
+import CopyEmailButton from "./CopyEmailButton";
+import MagicButton from "./ui/magic-button";
+import { FaDownload } from "react-icons/fa6";
+
+const EMAIL = "sherif.monir.badreddin@gmail.com";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
-      {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+    <footer className="w-full mb-20" id="contact">
+      <div className="pointer-events-none w-full absolute left-0 min-h-96">
         <img
           src="/footer-grid.svg"
-          alt="grid"
+          alt=""
+          aria-hidden="true"
           className="w-full h-full opacity-50"
         />
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="relative z-10 flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Looking for a junior front-end developer?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          I&apos;m open to entry-level front-end roles. Send me a message or grab my résumé.
+          I&apos;m open to entry-level front-end roles. Send me a message or grab my resumé.
         </p>
-        <a href="mailto:sherif.monir.badreddin@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
+
+        <p className="flex  items-center justify-center gap-2">
+          <span>Email:</span>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="hover:underline underline-offset-4 transition-colors hover:text-[#CBACF9]"
+          >
+            {EMAIL}
+          </a>
+          <CopyEmailButton email={EMAIL} />
+        </p>
+        <a
+          href="/Sherif_Monir_Frontend_Developer_Resume.pdf"
+          download="Sherif_Monir_Frontend_Developer_Resume.pdf"
+        >
+          <MagicButton title={"Download Resumé"} icon={<FaDownload />}  position={"right"} />
+  
         </a>
       </div>
-      <div className="flex mt-6 gap-15  flex-col justify-center items-center">
+
+      <div className="relative z-10 flex mt-6 gap-15 flex-col justify-center items-center">
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia?.map((info) => {
             if (!info) return null;
-
             return (
               <Link
                 href={info.link}

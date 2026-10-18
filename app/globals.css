@@ -122,7 +122,7 @@
 }
 
 .heading {
- @apply  text-[1rem] md:text-[2rem] lg:text-[3rem] text-center
+ @apply  text-[1rem] md:text-[2rem] lg:text-[3rem] text-center pt-10 mb-5 md:pt-50 md:mb-20
 }
 
 /* Helper background utilities for grid and dot effects used in template */
