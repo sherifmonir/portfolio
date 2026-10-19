@@ -1,8 +1,5 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
-import { projects } from "@/app/data";
-import { PinContainer } from "./ui/pin";
 import ThreeDCardDemo from "./3d-card-demo";
 
 const RecentProjects = () => {
