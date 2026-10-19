@@ -3,7 +3,7 @@
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { projects } from "@/app/data";
-import YellowButton from "./ui/YellowButton";
+import GithubButton from "./ui/GithubButton";
 import LiveButton from "./ui/LiveButton";
 
 export default function ThreeDCardDemo() {
@@ -36,7 +36,7 @@ export default function ThreeDCardDemo() {
               />
             </CardItem>
             <div className="flex justify-between items-center mt-20">
-                <YellowButton />
+                <GithubButton />
                 <LiveButton />
 
               
