@@ -3,7 +3,6 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { BackgroundRippleEffect } from "./ui/background-ripple-effect";
 import MagicButton from "./ui/magic-button";
 import { FaAnglesDown, FaDownload } from "react-icons/fa6";
-import ResumeButton from "./ResumeBtn";
 
 
 
@@ -13,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-full lg:my-55 ">
+    <header>
       <BackgroundRippleEffect />
       <div className="flex justify-center relative  my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
@@ -40,7 +39,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

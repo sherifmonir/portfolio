@@ -58,7 +58,7 @@ export const BentoGridItem = ({
 
   // Content shared across items
   const cardContent = (
-    <div className={`${id === 6 && "flex justify-center flex-col"} h-full relative overflow-hidden`}>
+    <div className={`${id === 5 && "flex justify-center flex-col"} h-full relative overflow-hidden`}>
       <div className="w-full h-full absolute">
         {img && (
           <img
@@ -68,17 +68,15 @@ export const BentoGridItem = ({
           />
         )}
       </div>
-      <div
-        className={`absolute right-0 -bottom-5 ${
-          id === 5 && "w-full opacity-80"
-        } `}
-      >
+
+      {/* chat mockup, pinned bottom-right (card 4) */}
+      <div className="absolute right-0 -bottom-5 w-3/5">
         {spareImg && (
           <img
             src={spareImg}
-            alt={spareImg}
-            className="object-cover object-center w-full h-full"
-          />
+            alt=""
+            className="w-full h-auto object-cover       object-center"
+         />
         )}
       </div>
 
@@ -130,7 +128,7 @@ export const BentoGridItem = ({
           </div>
         )}
 
-        {id === 6 && (
+        {id === 5 && (
           <div className="mt-5 relative z-20">
            
             <MagicButton
@@ -147,7 +145,7 @@ export const BentoGridItem = ({
   );
 
   
-   if (id === 6) {
+   if (id === 5) {
     return (
       <div
         className={cn(
