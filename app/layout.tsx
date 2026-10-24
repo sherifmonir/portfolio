@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sherif Monir",
   description: "Front-End Web Developer",
+  icons: {
+    icon: "/portfolio.svg", // Replace with the path to your file inside the public folder
+  },
 };
 
 export default function RootLayout({
