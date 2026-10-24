@@ -26,7 +26,7 @@ const Footer = () => {
           I&apos;m open to entry-level front-end roles. Send me a message or grab my resumé.
         </p>
 
-        <p className="flex  items-center justify-center gap-2">
+        <p className="flex flex-wrap items-center justify-center  gap-2">
           <span>Email:</span>
           <a
             href={`mailto:${EMAIL}`}

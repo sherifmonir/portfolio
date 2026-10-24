@@ -28,7 +28,7 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-3xl">
             Hi! I&apos;m Sherif, a Next.js Developer open to entry-level roles.
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-10 py-20">
+          <div className="flex flex-wrap justify-center items-center gap-5 md:gap-10 lg:py-20">
             <MagicButton title={"My Projects"} handleClick={projectsBtn} icon={<FaAnglesDown />} position={"right"} />
             <a
               href="/Sherif_Monir_Frontend_Developer_Resume.pdf"
