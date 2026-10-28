@@ -129,7 +129,7 @@ export const BentoGridItem = ({
         )}
 
         {id === 5 && (
-          <div className="mt-5 relative z-20">
+          <div className="mt-5 relative  z-20 ">
            
             <MagicButton
               title={copied ? "Email is Copied!" : "Copy my email address"}
@@ -149,14 +149,14 @@ export const BentoGridItem = ({
     return (
       <div
         className={cn(
-          "row-span-1 rounded-3xl group/bento transition duration-200 shadow-input dark:shadow-none flex flex-col w-full relative",
+          "row-span-1 rounded-3xl group/bento transition duration-200 shadow-input dark:shadow-none flex flex-col  w-full relative",
           className
         )}
       >
         <BackgroundGradient
           containerClassName="w-full block"
           className={cn(
-            "w-full h-full rounded-3xl overflow-hidden bg-[rgb(4,7,29)] border border-white/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 p-4 sm:p-10"
+            "w-full h-full rounded-3xl overflow-hidden bg-[rgb(4,7,29)] border border-white/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col items-center  space-y-4 p-4 sm:p-10"
           )}
         >
           {cardContent}

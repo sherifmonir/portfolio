@@ -18,7 +18,7 @@ const CopyEmailButton = ({ email }: { email: string }) => {
     <button
       type="button"
       onClick={handleCopy}
-      className="ml-3 h-full w-full flex justify-center items-center gap-1 rounded-md border border-white/20 px-3 py-1 text-xs transition hover:bg-white/10 cursor-pointer"
+      className="ml-3 h-full w-full max-w-20 flex justify-center items-center gap-1 rounded-md border border-white/20 px-3 py-1 text-xs transition hover:bg-white/10 cursor-pointer"
     >
       {copied ? 'Copied!' : 'Copy'}
        <IoCopyOutline />

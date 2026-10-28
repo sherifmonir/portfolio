@@ -45,7 +45,7 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-3 lg:row-span-1 md:col-span-3 md:row-span-1 flex",
     imgClassName: "",
-    titleClassName: "justify-center items-center md:max-w-full max-w-60 text-center",
+    titleClassName: "justify-center items-center md:max-w-full max-w-80 text-center",
     img: "",
     spareImg: "",
   },
