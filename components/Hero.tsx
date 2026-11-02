@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="flex justify-center relative  my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-sm  text-center text-blue-100 ">
-            Front-End Developer · React · TypeScript
+            Front-End Developer · React · Next.js · TypeScript
           </p>
 
           <TextGenerateEffect
@@ -26,7 +26,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-3xl">
-            Hi! I&apos;m Sherif, a Next.js Developer open to entry-level roles.
+            Hi! I&apos;m Sherif, a Next.js Developer open to junior roles.
           </p>
           <div className="flex flex-wrap justify-center items-center gap-5 md:gap-10 lg:py-20">
             <MagicButton title={"My Projects"} handleClick={projectsBtn} icon={<FaAnglesDown />} position={"right"} />

@@ -23,7 +23,7 @@ const Footer = () => {
           Looking for a front-end developer?
         </h1>
         <p className="text-white-200  my-5 text-center">
-          I&apos;m open to entry-level front-end roles. Send me a message or grab my resumé.
+          I&apos;m open to junior front-end roles. Send me a message or grab my resumé.
         </p>
 
         <p className="flex flex-wrap items-center justify-center  gap-2">
