@@ -20,7 +20,7 @@ const Footer = () => {
 
       <div className="relative z-10 flex flex-col items-center">
         <h1 className="heading lg:max-w-[40vw]">
-          Looking for a junior front-end developer?
+          Looking for a front-end developer?
         </h1>
         <p className="text-white-200  my-5 text-center">
           I&apos;m open to entry-level front-end roles. Send me a message or grab my resumé.
